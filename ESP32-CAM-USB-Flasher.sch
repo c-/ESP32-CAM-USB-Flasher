@@ -1,0 +1,360 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Notes Line
+	11150 4350 11150 6250
+$Comp
+L Connector:USB_B_Micro J2
+U 1 1 60DE72ED
+P 1350 1600
+F 0 "J2" H 1407 2067 50  0000 C CNN
+F 1 "USB_B_Micro" H 1407 1976 50  0000 C CNN
+F 2 "CPB:USB_Micro-B_CNC_C10418" H 1500 1550 50  0001 C CNN
+F 3 "~" H 1500 1550 50  0001 C CNN
+	1    1350 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Polyfuse_Small F1
+U 1 1 60DE8E45
+P 1800 1400
+F 0 "F1" V 1595 1400 50  0000 C CNN
+F 1 "500mA" V 1686 1400 50  0000 C CNN
+F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1850 1200 50  0001 L CNN
+F 3 "~" H 1800 1400 50  0001 C CNN
+	1    1800 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR022
+U 1 1 60DE9D4A
+P 2150 850
+F 0 "#PWR022" H 2150 700 50  0001 C CNN
+F 1 "+5V" H 2165 1023 50  0000 C CNN
+F 2 "" H 2150 850 50  0001 C CNN
+F 3 "" H 2150 850 50  0001 C CNN
+	1    2150 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1400 1650 1400
+$Comp
+L power:GND #PWR023
+U 1 1 60E0860B
+P 2400 2300
+F 0 "#PWR023" H 2400 2050 50  0001 C CNN
+F 1 "GND" H 2405 2127 50  0000 C CNN
+F 2 "" H 2400 2300 50  0001 C CNN
+F 3 "" H 2400 2300 50  0001 C CNN
+	1    2400 2300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1650 1800
+Wire Wire Line
+	1350 2000 1350 2300
+Wire Wire Line
+	1250 2300 1350 2300
+Text Label 3200 2000 0    50   ~ 0
+DTR
+Text Label 3200 2100 0    50   ~ 0
+RTS
+Text Label 3200 1400 0    50   ~ 0
+UTXD
+Text Label 3200 1300 0    50   ~ 0
+URXD
+$Comp
+L Device:C_Small C2
+U 1 1 60E3479A
+P 3000 950
+F 0 "C2" H 2908 904 50  0000 R CNN
+F 1 "100n" H 2908 995 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3000 950 50  0001 C CNN
+F 3 "~" H 3000 950 50  0001 C CNN
+	1    3000 950 
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR026
+U 1 1 60E34CCF
+P 3250 1000
+F 0 "#PWR026" H 3250 750 50  0001 C CNN
+F 1 "GND" H 3255 827 50  0000 C CNN
+F 2 "" H 3250 1000 50  0001 C CNN
+F 3 "" H 3250 1000 50  0001 C CNN
+	1    3250 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 1000 3250 950 
+Wire Wire Line
+	3250 950  3100 950 
+Wire Wire Line
+	2900 950  2800 950 
+Connection ~ 2800 950 
+$Comp
+L Transistor_BJT:UMH3N Q1
+U 1 1 60E5AC7E
+P 4350 1450
+F 0 "Q1" H 4641 1496 50  0000 L CNN
+F 1 "UMH3N" H 4641 1405 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4355 1010 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/transistor/digital/emh3t2r-e.pdf" H 4500 1450 50  0001 C CNN
+	1    4350 1450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:UMH3N Q1
+U 2 1 60E5B644
+P 4800 1450
+F 0 "Q1" H 5090 1404 50  0000 L CNN
+F 1 "UMH3N" H 5090 1495 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 4805 1010 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/transistor/digital/emh3t2r-e.pdf" H 4950 1450 50  0001 C CNN
+	2    4800 1450
+	1    0    0    1   
+$EndComp
+Text Label 1450 4550 2    50   ~ 0
+RST
+Text Label 5000 1750 3    50   ~ 0
+GPIO0
+Text Label 5000 1150 1    50   ~ 0
+DTR
+Text Label 4550 1750 3    50   ~ 0
+DTR
+Text Label 4600 1150 1    50   ~ 0
+RTS
+Text Label 4150 1800 3    50   ~ 0
+RTS
+Wire Wire Line
+	4150 1650 4150 1800
+Wire Wire Line
+	5000 1150 5000 1250
+Wire Wire Line
+	4550 1750 4550 1450
+Wire Wire Line
+	4600 1150 4600 1450
+Text Label 2050 1600 2    50   ~ 0
+D+
+Text Label 2050 1700 2    50   ~ 0
+D-
+Wire Wire Line
+	4150 1150 4150 1250
+Wire Wire Line
+	5000 1650 5000 1750
+Wire Wire Line
+	1900 1400 2150 1400
+$Comp
+L Connector_Generic:Conn_01x08 J3
+U 1 1 61145B49
+P 2350 3650
+F 0 "J3" H 2268 3025 50  0000 C CNN
+F 1 "RIGHT" H 2268 3116 50  0000 C CNN
+F 2 "CPB:Socket_Strip_Straight_1x08_nograf" H 2350 3650 50  0001 C CNN
+F 3 "~" H 2350 3650 50  0001 C CNN
+	1    2350 3650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2800 950  2800 1100
+Connection ~ 1350 2300
+$Comp
+L Interface_USB:CH340C U1
+U 1 1 61190720
+P 2800 1700
+F 0 "U1" H 2800 1011 50  0000 C CNN
+F 1 "CH340C" H 2800 920 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2850 1150 50  0001 L CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Jiangsu-Qin-Heng-CH340C_C84681.pdf" H 2450 2500 50  0001 C CNN
+	1    2800 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 850  2150 950 
+Wire Wire Line
+	2150 950  2800 950 
+Wire Wire Line
+	2150 950  2150 1400
+Connection ~ 2150 950 
+$Comp
+L Device:C_Small C1
+U 1 1 61194EC0
+P 2400 1050
+F 0 "C1" H 2308 1004 50  0000 R CNN
+F 1 "100n" H 2308 1095 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2400 1050 50  0001 C CNN
+F 3 "~" H 2400 1050 50  0001 C CNN
+	1    2400 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 1050 2700 1050
+Wire Wire Line
+	2700 1050 2700 1100
+$Comp
+L power:GND #PWR0101
+U 1 1 61195AAF
+P 2250 1150
+F 0 "#PWR0101" H 2250 900 50  0001 C CNN
+F 1 "GND" H 2255 977 50  0000 C CNN
+F 2 "" H 2250 1150 50  0001 C CNN
+F 3 "" H 2250 1150 50  0001 C CNN
+	1    2250 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1150 2250 1050
+Wire Wire Line
+	2250 1050 2300 1050
+Wire Wire Line
+	1650 1600 2400 1600
+Wire Wire Line
+	1650 1700 2400 1700
+Wire Wire Line
+	1350 2300 2400 2300
+Connection ~ 2400 2300
+Wire Wire Line
+	2400 2300 2800 2300
+$Comp
+L Device:R_Small R1
+U 1 1 6119D3DD
+P 1550 4300
+F 0 "R1" H 1609 4346 50  0000 L CNN
+F 1 "10K" H 1609 4255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 1550 4300 50  0001 C CNN
+F 3 "~" H 1550 4300 50  0001 C CNN
+	1    1550 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 6119D841
+P 1550 4200
+F 0 "#PWR0102" H 1550 4050 50  0001 C CNN
+F 1 "+5V" H 1565 4373 50  0000 C CNN
+F 2 "" H 1550 4200 50  0001 C CNN
+F 3 "" H 1550 4200 50  0001 C CNN
+	1    1550 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 4550 1550 4550
+Wire Wire Line
+	1550 4400 1550 4550
+Connection ~ 1550 4550
+Wire Wire Line
+	1550 4550 1450 4550
+$Comp
+L Transistor_FET:AO3400A Q2
+U 1 1 6119F368
+P 1850 4550
+F 0 "Q2" H 2055 4596 50  0000 L CNN
+F 1 "AO3400A" H 2055 4505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 2050 4475 50  0001 L CIN
+F 3 "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf" H 1850 4550 50  0001 L CNN
+	1    1850 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0103
+U 1 1 611A64CA
+P 2100 3100
+F 0 "#PWR0103" H 2100 2950 50  0001 C CNN
+F 1 "+5V" H 2115 3273 50  0000 C CNN
+F 2 "" H 2100 3100 50  0001 C CNN
+F 3 "" H 2100 3100 50  0001 C CNN
+	1    2100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 611A7655
+P 1950 4750
+F 0 "#PWR0104" H 1950 4500 50  0001 C CNN
+F 1 "GND" H 1955 4577 50  0000 C CNN
+F 2 "" H 1950 4750 50  0001 C CNN
+F 3 "" H 1950 4750 50  0001 C CNN
+	1    1950 4750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1550 3350
+NoConn ~ 1550 3650
+Text Label 1550 3750 0    50   ~ 0
+URXD
+Text Label 1550 3850 0    50   ~ 0
+UTXD
+Wire Wire Line
+	1800 3950 1550 3950
+Wire Wire Line
+	1800 3550 1800 3950
+Wire Wire Line
+	1800 3550 1550 3550
+$Comp
+L Mega-BLDC-cache:+3.3V #PWR0105
+U 1 1 61162597
+P 1600 3100
+F 0 "#PWR0105" H 1600 2950 50  0001 C CNN
+F 1 "+3.3V" H 1615 3273 50  0000 C CNN
+F 2 "" H 1600 3100 50  0001 C CNN
+F 3 "" H 1600 3100 50  0001 C CNN
+	1    1600 3100
+	1    0    0    -1  
+$EndComp
+Text Label 1550 3450 0    50   ~ 0
+GPIO0
+$Comp
+L Connector_Generic:Conn_01x08 J1
+U 1 1 61144F33
+P 1350 3650
+F 0 "J1" H 1430 3642 50  0000 L CNN
+F 1 "LEFT" H 1430 3551 50  0000 L CNN
+F 2 "CPB:Socket_Strip_Straight_1x08_nograf" H 1350 3650 50  0001 C CNN
+F 3 "~" H 1350 3650 50  0001 C CNN
+	1    1350 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 3250 1600 3250
+Wire Wire Line
+	1600 3250 1600 3100
+Wire Wire Line
+	2100 3100 2100 3250
+Wire Wire Line
+	2100 3250 2150 3250
+Wire Wire Line
+	1800 3950 1950 3950
+Wire Wire Line
+	1950 3950 1950 4350
+Connection ~ 1800 3950
+Wire Wire Line
+	2150 3350 1950 3350
+Wire Wire Line
+	1950 3350 1950 3950
+Connection ~ 1950 3950
+NoConn ~ 2150 3450
+NoConn ~ 2150 3550
+NoConn ~ 2150 3650
+NoConn ~ 2150 3750
+NoConn ~ 2150 3850
+NoConn ~ 2150 3950
+Text Label 4150 1150 1    50   ~ 0
+RST
+NoConn ~ 3200 1900
+NoConn ~ 3200 1800
+NoConn ~ 3200 1700
+NoConn ~ 3200 1600
+NoConn ~ 2400 1400
+Wire Wire Line
+	1250 2000 1250 2300
+$EndSCHEMATC
